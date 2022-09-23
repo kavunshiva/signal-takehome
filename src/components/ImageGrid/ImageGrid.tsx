@@ -38,11 +38,11 @@ class ImageGrid extends Component<ImageProps> {
       <div>
         <div>
           {
-            images && images.map(image => {
+            images && images.map((image, i) => {
               const { id, title } = image;
               return (
                 <img
-                  key={id}
+                  key={i}
                   id={id}
                   src={`https://i.giphy.com/media/${id}/200w.gif`}
                   alt={title}
