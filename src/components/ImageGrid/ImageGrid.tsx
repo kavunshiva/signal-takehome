@@ -28,7 +28,7 @@ class ImageGrid extends Component<ImageProps> {
 
   infiniteScroll = () => {
     const { scrollTop, offsetHeight } = document.documentElement;
-    if (window.innerHeight + scrollTop === offsetHeight) this.props.fetchImages();
+    if (window.innerHeight + scrollTop >= offsetHeight - 1) this.props.fetchImages();
   }
 
   renderImages() {
